@@ -17,7 +17,7 @@ import WhoWeServePage from './pages/WhoWeServePage'
 function App() {
   return (
     <Router>
-      {/* 👇 ScrollToTop added here */}
+      {/* 👇 Global Scroll Reset */}
       <ScrollToTop />
 
       <div className="min-h-screen">
