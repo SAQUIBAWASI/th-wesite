@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Who We Serve', path: '/who-we-serve' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact Us', path: '/contact' }
   ]
 
   const isActive = (path) => location.pathname === path
@@ -63,14 +63,14 @@ const Navbar = () => {
           <div className="items-center hidden space-x-4 md:flex">
             <button
               onClick={handleCall}
-              className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:shadow-md transition"
+              className="flex items-center justify-center w-10 h-10 transition bg-white rounded-full shadow hover:shadow-md"
             >
               <Phone size={18} className="text-blue-600" />
             </button>
 
             <button
               onClick={handleWhatsApp}
-              className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:shadow-md transition"
+              className="flex items-center justify-center w-10 h-10 transition bg-white rounded-full shadow hover:shadow-md"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -112,13 +112,13 @@ const Navbar = () => {
               <div className="flex flex-row gap-3 pt-4">
                 <button
                   onClick={handleCall}
-                  className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:shadow-md transition"
+                  className="flex items-center justify-center w-10 h-10 transition bg-white rounded-full shadow hover:shadow-md"
                 >
                   <Phone size={18} className="text-blue-600" />
                 </button>
                 <button
                   onClick={handleWhatsApp}
-                  className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:shadow-md transition"
+                  className="flex items-center justify-center w-10 h-10 transition bg-white rounded-full shadow hover:shadow-md"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"

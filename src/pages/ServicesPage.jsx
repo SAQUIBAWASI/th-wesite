@@ -1,4 +1,4 @@
-import { Building, Calendar, Heart, Home, MessageCircle, Phone, Shield, Stethoscope, Users } from 'lucide-react'
+import { Building, Calendar, Heart, Home, Phone, Shield, Stethoscope, Users } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 const ServicesPage = () => {
@@ -120,7 +120,7 @@ const ServicesPage = () => {
         <div className="max-w-4xl mx-auto text-left">
           <h1 className="mb-6 text-3xl md:text-5xl font-bold">
             Healthcare{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
               That Comes to You
             </span>
           </h1>
@@ -219,7 +219,11 @@ const ServicesPage = () => {
               onClick={handleHealthPlan}
               className="flex items-center justify-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
             >
-              <MessageCircle size={20} />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-6 h-6"
+              />
               <span>Get a Free Preventive Health Plan</span>
             </button>
           </div>
@@ -227,17 +231,17 @@ const ServicesPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50">
+      <section className="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Have Questions About Our Services?
           </h2>
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          <p className="text-lg text-white mb-8 leading-relaxed">
             Our health advisors are ready to help you choose the right service for your needs.
           </p>
           <button
             onClick={handleWhatsApp}
-            className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
+            className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-green-500 transition-colors font-semibold"
           >
             Chat with Our Health Advisor
           </button>

@@ -1,4 +1,4 @@
-import { Building, Calendar, Home, MessageCircle, Users } from 'lucide-react'
+import { Building, Calendar, Home, Users } from 'lucide-react'
 
 const WhoWeServePage = () => {
   const handleStrategyCall = () => {
@@ -179,20 +179,20 @@ const WhoWeServePage = () => {
       </section>
 
       {/* Partner Invitation */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6">
+          <h2 className="mb-6 text-white">
             Are you a community leader or corporate wellness head?
           </h2>
-          <p className="mb-8">
+          <p className="mb-8 text-white">
             Let's create a customized health engagement plan for your people.
             We'll work with you to design programs that meet your specific needs and goals.
           </p>
           <button
             onClick={handleStrategyCall}
-            className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            className="px-8 py-4 bg-white text-blue-500 rounded-lg hover:bg-green-500 transition-colors font-semibold"
           >
-            → Schedule a Strategy Call
+            Schedule a Strategy Call
           </button>
         </div>
       </section>
@@ -210,7 +210,11 @@ const WhoWeServePage = () => {
               onClick={handleWhatsApp}
               className="flex items-center justify-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
             >
-              <MessageCircle size={20} />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-6 h-6"
+              />
               <span>Chat with Our Team</span>
             </button>
             <button

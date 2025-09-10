@@ -5,7 +5,6 @@ import {
   ChevronDown,
   Heart,
   Home,
-  MessageCircle,
   Search,
   Shield,
   Star,
@@ -15,6 +14,8 @@ import {
 import { useEffect, useState } from 'react'
 
 const HomePage = () => {
+  const [name, setName] = useState('')
+  const [whatsapp, setWhatsapp] = useState('')
   const [selectedAudience, setSelectedAudience] = useState('')
   const [selectedNeed, setSelectedNeed] = useState('')
   const [liveStats, setLiveStats] = useState({
@@ -51,8 +52,9 @@ const HomePage = () => {
   }
 
   const handleInteractiveCTA = () => {
-    if (selectedAudience && selectedNeed) {
-      const message = `Hi! I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get started.`
+    if (name && whatsapp && selectedAudience && selectedNeed) {
+      const message = `Hi! My name is ${name}, my WhatsApp number is ${whatsapp}. 
+I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get started.`
       window.open(`https://wa.me/919010481048?text=${encodeURIComponent(message)}`, '_blank')
     }
   }
@@ -84,12 +86,12 @@ const HomePage = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center grid-cols-1 gap-12 px-6 mx-auto max-w-7xl lg:px-8 lg:grid-cols-2">
           {/* Left Side - Text Content */}
           <div>
             <h1 className="mb-6">
               Trusted Healthcare,{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
                 Just Around the Corner
               </span>
             </h1>
@@ -99,29 +101,33 @@ const HomePage = () => {
 
             {/* CTA Buttons */}
             <div className="flex gap-4 mb-8">
-              <button
-                onClick={handleWhatsApp}
-                className="flex items-center justify-center w-14 h-14 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
-              >
-                <MessageCircle size={22} />
-              </button>
+               <button
+              onClick={handleWhatsApp}
+              className="flex items-center justify-center w-14 h-14 transition bg-gray-100 rounded-full shadow hover:shadow-md"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-6 h-6"
+              />
+            </button>
               <button
                 onClick={handleBookCamp}
-                className="flex items-center justify-center w-14 h-14 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+                className="flex items-center justify-center text-white transition-colors bg-blue-600 rounded-full w-14 h-14 hover:bg-blue-700"
               >
                 <Calendar size={22} />
               </button>
               <button
                 onClick={handleFindDoctor}
-                className="flex items-center justify-center w-14 h-14 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
+                className="flex items-center justify-center text-white transition-colors bg-purple-600 rounded-full w-14 h-14 hover:bg-purple-700"
               >
                 <Search size={22} />
               </button>
             </div>
 
             {/* Emotional Story Hook */}
-            <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl shadow-md">
-              <blockquote className="italic mb-4">
+            <div className="p-6 shadow-md bg-gradient-to-r from-blue-50 to-green-50 rounded-xl">
+              <blockquote className="mb-4 italic">
                 "When Meena's mother experienced chest pain late one evening, she needed urgent advice. 
                 Through Timely Health, she connected with a verified local cardiologist — within 30 minutes. 
                 Today, she says: 'Timely Health gave us peace of mind when we needed it most.'"
@@ -131,7 +137,7 @@ const HomePage = () => {
               </p>
               <button
                 onClick={handleStartConsultation}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-6 py-3 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
               >
                 → Start a Consultation
               </button>
@@ -143,7 +149,7 @@ const HomePage = () => {
             <img
               src="/assets/images/s2.jpg"
               alt="Healthcare Support"
-              className="rounded-2xl shadow-lg w-full h-auto object-cover"
+              className="object-cover w-full h-auto shadow-lg rounded-2xl"
             />
           </div>
         </div>
@@ -151,12 +157,12 @@ const HomePage = () => {
 
       {/* Service Snapshot */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center mb-12">Our Services Snapshot</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center">Our Services Snapshot</h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center space-x-4 mb-4">
+              <div key={index} className="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
+                <div className="flex items-center mb-4 space-x-4">
                   {service.icon}
                   <h3>{service.title}</h3>
                 </div>
@@ -169,17 +175,17 @@ const HomePage = () => {
 
       {/* Why Choose Timely Health */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-8 text-2xl sm:text-3xl font-bold text-gray-800">
+        <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+          <h2 className="mb-8 text-2xl font-bold text-gray-800 sm:text-3xl">
             Why Choose Timely Health
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-items-center">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-3 bg-gray-50 px-4 py-2 rounded-lg shadow-sm w-full max-w-sm"
+                className="flex items-center w-full max-w-sm px-4 py-2 space-x-3 rounded-lg shadow-sm bg-gray-50"
               >
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <CheckCircle className="flex-shrink-0 w-5 h-5 text-green-600" />
                 <span className="text-gray-700">{item}</span>
               </div>
             ))}
@@ -189,17 +195,43 @@ const HomePage = () => {
 
       {/* Interactive CTA */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-center mb-8">What Do You Need?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="p-8 bg-white shadow-lg rounded-xl">
+            <h2 className="mb-8 text-center">What Do You Need?</h2>
+            <div className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
+
+              {/* Name Input */}
+              <div className="md:col-span-1">
+                <label className="block mb-2 text-sm font-medium">Your Name</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* WhatsApp Number Input */}
+              <div className="md:col-span-1">
+                <label className="block mb-2 text-sm font-medium">WhatsApp Number</label>
+                <input
+                  type="tel"
+                  value={whatsapp}
+                  onChange={(e) => setWhatsapp(e.target.value)}
+                  placeholder="Enter WhatsApp number"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              {/* Who are you? */}
               <div>
-                <label className="block text-sm font-medium mb-2">Who are you?</label>
+                <label className="block mb-2 text-sm font-medium">Who are you?</label>
                 <div className="relative">
                   <select
                     value={selectedAudience}
                     onChange={(e) => setSelectedAudience(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select...</option>
                     <option value="Individual">Individual</option>
@@ -207,16 +239,18 @@ const HomePage = () => {
                     <option value="Clinic Owner">Clinic Owner</option>
                     <option value="Corporate HR">Corporate HR</option>
                   </select>
-                  <ChevronDown className="absolute right-3 top-3 w-5 h-5 text-gray-400 pointer-events-none" />
+                  <ChevronDown className="absolute w-5 h-5 text-gray-400 pointer-events-none right-3 top-3" />
                 </div>
               </div>
+
+              {/* What are you looking for? */}
               <div>
-                <label className="block text-sm font-medium mb-2">What are you looking for?</label>
+                <label className="block mb-2 text-sm font-medium">What are you looking for?</label>
                 <div className="relative">
                   <select
                     value={selectedNeed}
                     onChange={(e) => setSelectedNeed(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select...</option>
                     <option value="Doctor">Doctor</option>
@@ -224,15 +258,16 @@ const HomePage = () => {
                     <option value="Workshop">Workshop</option>
                     <option value="Branding">Branding</option>
                   </select>
-                  <ChevronDown className="absolute right-3 top-3 w-5 h-5 text-gray-400 pointer-events-none" />
+                  <ChevronDown className="absolute w-5 h-5 text-gray-400 pointer-events-none right-3 top-3" />
                 </div>
               </div>
             </div>
+
             <div className="text-center">
               <button
                 onClick={handleInteractiveCTA}
-                disabled={!selectedAudience || !selectedNeed}
-                className="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                disabled={!name || !whatsapp || !selectedAudience || !selectedNeed}
+                className="px-8 py-3 text-white transition-colors bg-green-600 rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
                 Start a Free Chat on WhatsApp
               </button>
@@ -241,76 +276,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Live Chat Board */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-center mb-6 text-2xl font-bold text-gray-800">Live Chat Board</h2>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                const name = e.target.name.value
-                const phone = e.target.phone.value
-                const message = e.target.message.value
-                if (!name || !phone || !message) {
-                  alert("Please fill all fields")
-                  return
-                }
-                const whatsappMessage = `Hi, my name is ${name}. My contact number is ${phone}. Here is my query: ${message}`
-                window.open(
-                  `https://wa.me/919010481048?text=${encodeURIComponent(whatsappMessage)}`,
-                  "_blank"
-                )
-              }}
-              className="space-y-6"
-            >
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Phone Number</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Enter your phone number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Your Message</label>
-                <textarea
-                  name="message"
-                  placeholder="Type your query here..."
-                  rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                >
-                  Send on WhatsApp
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center mb-12">Real Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center">Real Testimonials</h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl">
+              <div key={index} className="p-6 bg-gray-50 rounded-xl">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -325,13 +297,13 @@ const HomePage = () => {
       </section>
 
       {/* Brand Promise */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6">"Care You Can Trust. Right Where You Are."</h2>
-          <p className="mb-8">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
+      <section className="py-20 text-center text-white bg-gradient-to-r from-blue-500 to-green-500">
+        <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-white">"Care You Can Trust. Right Where You Are."</h2>
+          <p className="mb-8 text-white">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
           <button
             onClick={handleWhatsApp}
-            className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            className="px-8 py-4 font-semibold text-blue-600 transition-colors bg-white rounded-lg hover:bg-green-500"
           >
             Get Started Today
           </button>

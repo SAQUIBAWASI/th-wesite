@@ -1,4 +1,4 @@
-import { Clock, Globe, Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react'
+import { Globe, Mail, Phone, Send } from 'lucide-react'
 import { useState } from 'react'
 
 
@@ -66,7 +66,11 @@ Please get back to me within 24 hours as mentioned on your website.`
       description: "Available 24/7 for urgent consultations"
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-green-600" />,
+      icon: <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        className="w-8 h-8 text-green-600"
+      />,
       title: "WhatsApp Us",
       info: "Chat Now",
       action: handleWhatsApp,
@@ -140,172 +144,100 @@ Please get back to me within 24 hours as mentioned on your website.`
       </section>
 
       {/* Contact Info & Form */}
-      <section className="py-16 bg-gray-50">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            {/* Contact Information */}
-            <div>
-              <h2 className="mb-6">Get in Touch</h2>
+<section className="py-16 bg-gray-50 flex items-center justify-center">
+  <div className="w-full max-w-xl px-4">
+    {/* Contact Form */}
+    <div className="p-8 bg-white shadow-lg rounded-xl">
+      <h2 className="mb-6 text-center">Send Us a Message</h2>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-4 h-4 mt-1 text-blue-600" />
-                  <div>
-                    <h3>Phone</h3>
-                    <button onClick={handleCall} className="text-blue-600 hover:underline">
-                      +91 9010481048
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-4 h-4 mt-1 text-red-600" />
-                  <div>
-                    <h3>Email</h3>
-                    <button onClick={handleEmail} className="text-blue-600 hover:underline">
-                      hello@timelyhealth.com
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Globe className="w-4 h-4 mt-1 text-purple-600" />
-                  <div>
-                    <h3>Website</h3>
-                    <span className="text-gray-600">www.timelyhealth.in</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <MessageCircle className="w-4 h-4 mt-1 text-green-600" />
-                  <div>
-                    <h3>WhatsApp</h3>
-                    <button onClick={handleWhatsApp} className="text-green-600 hover:underline">
-                      Chat Now
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-4 h-4 mt-1 text-indigo-600" />
-                  <div>
-                    <h3>Base Location</h3>
-                    <span className="text-gray-600">Hyderabad, India</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-4 h-4 mt-1 text-orange-600" />
-                  <div>
-                    <h3>Response Time</h3>
-                    <span className="text-gray-600">Within 24 hours</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <button
-                  onClick={handleWhatsApp}
-                  className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-white transition-colors bg-green-600 rounded-lg sm:w-auto hover:bg-green-700"
-                >
-                  <MessageCircle size={20} />
-                  <span>Start WhatsApp Chat</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="p-8 bg-white shadow-lg rounded-xl">
-              <h2 className="mb-6">Send Us a Message</h2>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block mb-2">Name *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div>
-                  <label className="block mb-2">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block mb-2">Phone *</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+91 9876543210"
-                  />
-                </div>
-
-                <div>
-                  <label className="block mb-2">What are you interested in? *</label>
-                  <select
-                    name="interest"
-                    value={formData.interest}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select an option...</option>
-                    <option value="Doctor Consultation">Doctor Consultation</option>
-                    <option value="Health Camp">Health Camp</option>
-                    <option value="Workshop">Workshop</option>
-                    <option value="Corporate Wellness">Corporate Wellness</option>
-                    <option value="RWA Partnership">RWA Partnership</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block mb-2">Message *</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us more about your requirements..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="flex items-center justify-center w-full px-6 py-3 space-x-2 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
-                >
-                  <Send size={20} />
-                  <span>Submit & We'll Get Back Within 24 Hours</span>
-                </button>
-              </form>
-
-              <p className="mt-4 text-sm text-center text-gray-600">
-                * By submitting this form, your message will be sent via WhatsApp for faster response.
-              </p>
-            </div>
-          </div>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block mb-2">Name *</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="Your full name"
+          />
         </div>
-      </section>
+
+        <div>
+          <label className="block mb-2">Email *</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="your.email@example.com"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-2">Phone *</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="+91 9876543210"
+          />
+        </div>
+
+        <div>
+          <label className="block mb-2">What are you interested in? *</label>
+          <select
+            name="interest"
+            value={formData.interest}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="">Select an option...</option>
+            <option value="Doctor Consultation">Doctor Consultation</option>
+            <option value="Health Camp">Health Camp</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Corporate Wellness">Corporate Wellness</option>
+            <option value="RWA Partnership">RWA Partnership</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block mb-2">Message *</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            rows={4}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="Tell us more about your requirements..."
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="flex items-center justify-center w-full px-6 py-3 space-x-2 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
+        >
+          <Send size={20} />
+          <span>Submit & We'll Get Back Within 24 Hours</span>
+        </button>
+      </form>
+
+      <p className="mt-4 text-sm text-center text-gray-600">
+        * By submitting this form, your message will be sent via WhatsApp for faster response.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Map Section */}
       <section className="py-16 bg-white">

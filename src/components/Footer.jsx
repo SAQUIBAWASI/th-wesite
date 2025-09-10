@@ -21,22 +21,22 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center mb-4 space-x-2">
-              <div className="flex items-center justify-center w-15 h-15 ">
-                 <img
-                   src="/assets/images/logo2.png"
-                   alt="Timely Health Logo"
-                   className="object-contain w-full h-full"
-                 />
+              <div className="flex items-center justify-center w-15 h-14 ">
+                  <img 
+      src="/assets/images/thw.png" 
+      alt="Timely Health Logo" 
+      className="object-contain w-full h-full"
+    />
                 {/* <span className="text-lg font-bold text-white">TH</span> */}
               </div>
-              <span className="text-xl font-bold"></span>
+              {/* <span className="text-xl font-bold">Timely Health</span> */}
             </div>
             <p className="max-w-md mb-6 text-gray-300">
               Care You Can Trust. Right Where You Are. We believe healthcare should be simple, local, and always within reach — for everyone.
             </p>
            <div className="flex space-x-4">
-  {/* WhatsApp Button */}
-  <button
+          {/* WhatsApp Button */}
+   <button
     onClick={handleWhatsApp}
     className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow hover:shadow-md transition"
   >
