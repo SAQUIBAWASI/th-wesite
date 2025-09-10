@@ -91,10 +91,10 @@ Please get back to me within 24 hours as mentioned on your website.`
   return (
    <div className="min-h-screen">
   {/* Hero Section */}
-  <section className="text-white px-6 py-12 lg:px-20 lg:py-16 bg-white bg-opacity-60">
+  <section className="px-6 py-12 text-white bg-white lg:px-20 lg:py-16 bg-opacity-60">
     {/* Text */}
     <div className="max-w-4xl mx-auto text-left">
-      <h1 className="mb-6 text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-black bg-clip-text text-transparent">
+      <h1 className="mb-6 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-black bg-clip-text">
         Talk to Timely Health
       </h1>
       <p className="mb-8 text-lg">
@@ -105,9 +105,9 @@ Please get back to me within 24 hours as mentioned on your website.`
     {/* Image */}
     <div className="max-w-5xl mx-auto">
       <img
-        src="/assets/images/contact.jpg"
+        src="/assets/images/C2.jpg"
         alt="Contact Timely Health"
-        className="w-full h-80 rounded-lg shadow-lg object-cover"
+        className="object-cover w-full rounded-lg shadow-lg h-85"
       />
     </div>
   </section>
@@ -116,19 +116,19 @@ Please get back to me within 24 hours as mentioned on your website.`
 
       {/* Contact Methods */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {contactMethods.map((method, index) => (
               <div key={index} className="text-center">
                 <button
                   onClick={method.action}
-                  className="w-full bg-gray-50 hover:bg-gray-100 p-6 rounded-xl transition-colors group"
+                  className="w-full p-6 transition-colors bg-gray-50 hover:bg-gray-100 rounded-xl group"
                 >
                   <div className="flex justify-center mb-4">
                     {method.icon}
                   </div>
                   <h3 className="mb-2">{method.title}</h3>
-                  <p className="text-blue-600 font-medium mb-2 group-hover:underline">
+                  <p className="mb-2 font-medium text-blue-600 group-hover:underline">
                     {method.info}
                   </p>
                   <p className="text-sm text-gray-600">{method.description}</p>
@@ -141,15 +141,15 @@ Please get back to me within 24 hours as mentioned on your website.`
 
       {/* Contact Info & Form */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Contact Information */}
             <div>
               <h2 className="mb-6">Get in Touch</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Phone className="w-4 h-4 text-blue-600 mt-1" />
+                  <Phone className="w-4 h-4 mt-1 text-blue-600" />
                   <div>
                     <h3>Phone</h3>
                     <button onClick={handleCall} className="text-blue-600 hover:underline">
@@ -159,7 +159,7 @@ Please get back to me within 24 hours as mentioned on your website.`
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Mail className="w-4 h-4 text-red-600 mt-1" />
+                  <Mail className="w-4 h-4 mt-1 text-red-600" />
                   <div>
                     <h3>Email</h3>
                     <button onClick={handleEmail} className="text-blue-600 hover:underline">
@@ -169,7 +169,7 @@ Please get back to me within 24 hours as mentioned on your website.`
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Globe className="w-4 h-4 text-purple-600 mt-1" />
+                  <Globe className="w-4 h-4 mt-1 text-purple-600" />
                   <div>
                     <h3>Website</h3>
                     <span className="text-gray-600">www.timelyhealth.in</span>
@@ -177,7 +177,7 @@ Please get back to me within 24 hours as mentioned on your website.`
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <MessageCircle className="w-4 h-4 text-green-600 mt-1" />
+                  <MessageCircle className="w-4 h-4 mt-1 text-green-600" />
                   <div>
                     <h3>WhatsApp</h3>
                     <button onClick={handleWhatsApp} className="text-green-600 hover:underline">
@@ -187,7 +187,7 @@ Please get back to me within 24 hours as mentioned on your website.`
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <MapPin className="w-4 h-4 text-indigo-600 mt-1" />
+                  <MapPin className="w-4 h-4 mt-1 text-indigo-600" />
                   <div>
                     <h3>Base Location</h3>
                     <span className="text-gray-600">Hyderabad, India</span>
@@ -195,7 +195,7 @@ Please get back to me within 24 hours as mentioned on your website.`
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Clock className="w-4 h-4 text-orange-600 mt-1" />
+                  <Clock className="w-4 h-4 mt-1 text-orange-600" />
                   <div>
                     <h3>Response Time</h3>
                     <span className="text-gray-600">Within 24 hours</span>
@@ -206,7 +206,7 @@ Please get back to me within 24 hours as mentioned on your website.`
               <div className="mt-8">
                 <button
                   onClick={handleWhatsApp}
-                  className="w-full sm:w-auto flex items-center justify-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                  className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-white transition-colors bg-green-600 rounded-lg sm:w-auto hover:bg-green-700"
                 >
                   <MessageCircle size={20} />
                   <span>Start WhatsApp Chat</span>
@@ -215,7 +215,7 @@ Please get back to me within 24 hours as mentioned on your website.`
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="p-8 bg-white shadow-lg rounded-xl">
               <h2 className="mb-6">Send Us a Message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -292,14 +292,14 @@ Please get back to me within 24 hours as mentioned on your website.`
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                  className="flex items-center justify-center w-full px-6 py-3 space-x-2 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
                 >
                   <Send size={20} />
                   <span>Submit & We'll Get Back Within 24 Hours</span>
                 </button>
               </form>
 
-              <p className="text-sm text-gray-600 mt-4 text-center">
+              <p className="mt-4 text-sm text-center text-gray-600">
                 * By submitting this form, your message will be sent via WhatsApp for faster response.
               </p>
             </div>
@@ -309,13 +309,13 @@ Please get back to me within 24 hours as mentioned on your website.`
 
       {/* Map Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-8 text-center">
             <h2 className="mb-4">Our Location</h2>
             <p>Based in Hyderabad, serving communities across the city</p>
           </div>
 
-          <div className="bg-gray-100 rounded-xl p-4 text-center">
+          <div className="p-4 text-center bg-gray-100 rounded-xl">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.281849174702!2d78.37856837492732!3d17.443456483452636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93c9b7e6c7a7%3A0x6a78e6e84f91e7!2sTimely%20Health!5e0!3m2!1sen!2sin!4v1693910289975!5m2!1sen!2sin"
               width="100%"

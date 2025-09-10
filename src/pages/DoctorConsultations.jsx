@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function DoctorConsultations() {
   return (
@@ -13,21 +14,21 @@ export default function DoctorConsultations() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
                 Doctor Consultations — Anytime, Anywhere
               </h1>
-              <p className="mt-4 text-lg sm:text-xl max-w-xl opacity-90">
+              <p className="mt-4 text-lg sm:text-xl max-w-xl text-white opacity-90">
                 Connect instantly with certified general physicians and specialists.
                 Choose online video consults or book in-person visits near you.
               </p>
 
               <div className="mt-8 flex gap-3 flex-wrap">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="inline-block bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg"
                 >
                   Book a Consultation
-                </a>
+                </Link>
                 <a
                   href="#faq"
                   className="inline-block border border-white/40 text-white px-5 py-3 rounded-lg hover:bg-white/10"
@@ -143,18 +144,18 @@ export default function DoctorConsultations() {
           </div>
 
           <div className="flex gap-3">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-800"
             >
               Book Now
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-block border border-blue-700 text-blue-700 px-5 py-3 rounded-lg hover:bg-blue-50"
             >
               Contact Support
-            </a>
+            </Link>
           </div>
         </section>
       </main>

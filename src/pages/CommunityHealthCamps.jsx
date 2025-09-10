@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ React Router Link import
 
 export default function CommunityHealthCamps() {
   return (
@@ -13,7 +14,7 @@ export default function CommunityHealthCamps() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-blue-800">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-blue-500">
                 Community Health Camps — Care for Everyone
               </h1>
               <p className="mt-4 text-lg sm:text-xl max-w-xl text-gray-700">
@@ -29,6 +30,7 @@ export default function CommunityHealthCamps() {
                 >
                   Explore Camps
                 </a>
+
                 <a
                   href="#faq"
                   className="inline-block border border-blue-600 text-blue-600 px-5 py-3 rounded-lg hover:bg-blue-50"
@@ -147,18 +149,20 @@ export default function CommunityHealthCamps() {
           </div>
 
           <div className="flex gap-3">
-            <a
-              href="/register"
+            {/* ✅ React Router Link */}
+            <Link
+              to="/contact"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700"
             >
               Register Now
-            </a>
-            <a
-              href="/contact"
+            </Link>
+
+            <Link
+              to="/contact"
               className="inline-block border border-blue-600 text-blue-600 px-5 py-3 rounded-lg hover:bg-blue-50"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </section>
       </main>

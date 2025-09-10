@@ -1,0 +1,14 @@
+{
+  "name": "th-zeta-cms",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build --out dist",
+    "start": "sanity start",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "sanity": "^3.63.0"
+  }
+}

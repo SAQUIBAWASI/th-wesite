@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ React Router Link import
 
 export default function WellnessWorkshops() {
   return (
@@ -13,7 +14,7 @@ export default function WellnessWorkshops() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight ">
                 Wellness Workshops — Learn, Heal & Grow Together
               </h1>
               <p className="mt-4 text-lg sm:text-xl max-w-xl">
@@ -145,18 +146,18 @@ export default function WellnessWorkshops() {
           </div>
 
           <div className="flex gap-3">
-            <a
-              href="/register"
+            <Link
+              to="/contact"
               className="inline-block bg-purple-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-700"
             >
               Join Workshop
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-block border border-purple-400 text-purple-400 px-5 py-3 rounded-lg hover:bg-purple-50"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </section>
       </main>

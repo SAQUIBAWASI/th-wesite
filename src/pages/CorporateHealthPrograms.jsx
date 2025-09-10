@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ add import
 
 export default function CorporateHealthPrograms() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
       {/* HERO */}
-      <header className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+      <header className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
         <div className="max-w-6xl mx-auto px-6 py-14 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* TEXT BLOCK */}
@@ -13,21 +14,22 @@ export default function CorporateHealthPrograms() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
                 Corporate Health Programs — Empower Your Workforce
               </h1>
-              <p className="mt-4 text-lg sm:text-xl max-w-xl opacity-90">
+              <p className="mt-4 text-lg sm:text-xl max-w-xl text-white opacity-90">
                 Boost employee productivity and well-being with our tailored
                 workplace health solutions — from checkups to wellness workshops.
               </p>
 
               <div className="mt-8 flex gap-3 flex-wrap">
-                <a
-                  href="/contact"
+                {/* ✅ changed <a> to <Link> */}
+                <Link
+                  to="/contact"
                   className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg"
                 >
                   Get a Proposal
-                </a>
+                </Link>
                 <a
                   href="#faq"
                   className="inline-block border border-white/40 text-white px-5 py-3 rounded-lg hover:bg-white/10"
@@ -65,6 +67,7 @@ export default function CorporateHealthPrograms() {
           </h3>
 
           <div className="grid md:grid-cols-3 gap-6">
+            {/* features cards remain unchanged */}
             <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
               <h4 className="font-bold text-lg text-cyan-700">
                 Employee Checkups
@@ -176,18 +179,19 @@ export default function CorporateHealthPrograms() {
           </div>
 
           <div className="flex gap-3">
-            <a
-              href="/contact"
+            {/* ✅ changed <a> to <Link> */}
+            <Link
+              to="/contact"
               className="inline-block bg-cyan-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-cyan-800"
             >
               Request a Demo
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-block border border-cyan-700 text-cyan-700 px-5 py-3 rounded-lg hover:bg-cyan-50"
             >
               Contact Sales
-            </a>
+            </Link>
           </div>
         </section>
       </main>

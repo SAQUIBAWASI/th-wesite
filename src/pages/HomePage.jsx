@@ -58,37 +58,12 @@ const HomePage = () => {
   }
 
   const services = [
-    
-    {
-      icon: <Shield className="w-8 h-8 text-indigo-600" />,
-      title: "Second Opinions",
-      description: "Trusted expert inputs"
-    },
-    {
-      icon: <Home className="w-8 h-8 text-green-600" />,
-      title: "Home Diagnostics",
-      description: "Lab tests at home"
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-red-600" />,
-      title: "Wellness Sessions",
-      description: "Yoga, stress relief, immunity"
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-600" />,
-      title: "Health Camps",
-      description: "For RWAs & companies"
-    },
-    {
-      icon: <Stethoscope className="w-8 h-8 text-blue-600" />,
-      title: "Doctor Consults",
-      description: "Verified specialists"
-    },
-    {
-      icon: <Activity className="w-8 h-8 text-orange-600" />,
-      title: "Community Meetups",
-      description: "Group care & awareness"
-    },
+    { icon: <Shield className="w-8 h-8 text-indigo-600" />, title: "Second Opinions", description: "Trusted expert inputs" },
+    { icon: <Home className="w-8 h-8 text-green-600" />, title: "Home Diagnostics", description: "Lab tests at home" },
+    { icon: <Heart className="w-8 h-8 text-red-600" />, title: "Wellness Sessions", description: "Yoga, stress relief, immunity" },
+    { icon: <Users className="w-8 h-8 text-purple-600" />, title: "Health Camps", description: "For RWAs & companies" },
+    { icon: <Stethoscope className="w-8 h-8 text-blue-600" />, title: "Doctor Consults", description: "Verified specialists" },
+    { icon: <Activity className="w-8 h-8 text-orange-600" />, title: "Community Meetups", description: "Group care & awareness" },
   ]
 
   const whyChooseUs = [
@@ -101,16 +76,8 @@ const HomePage = () => {
   ]
 
   const testimonials = [
-    {
-      text: "Our RWA worked with Timely Health for a health camp. Smooth execution, excellent doctor panel.",
-      author: "Shalini V.",
-      role: "RWA Secretary"
-    },
-    {
-      text: "Timely Health helped my clinic reach 3x more patients — highly professional.",
-      author: "Dr. Anil M.",
-      role: "ENT Specialist"
-    }
+    { text: "Our RWA worked with Timely Health for a health camp. Smooth execution, excellent doctor panel.", author: "Shalini V.", role: "RWA Secretary" },
+    { text: "Timely Health helped my clinic reach 3x more patients — highly professional.", author: "Dr. Anil M.", role: "ENT Specialist" }
   ]
 
   return (
@@ -118,7 +85,6 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
           {/* Left Side - Text Content */}
           <div>
             <h1 className="mb-6">
@@ -139,14 +105,12 @@ const HomePage = () => {
               >
                 <MessageCircle size={22} />
               </button>
-
               <button
                 onClick={handleBookCamp}
                 className="flex items-center justify-center w-14 h-14 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
               >
                 <Calendar size={22} />
               </button>
-
               <button
                 onClick={handleFindDoctor}
                 className="flex items-center justify-center w-14 h-14 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
@@ -203,27 +167,25 @@ const HomePage = () => {
         </div>
       </section>
 
-     {/* Why Choose Timely Health */}
-<section className="py-16 bg-white">
-  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="mb-8 text-2xl sm:text-3xl font-bold text-gray-800">
-      Why Choose Timely Health
-    </h2>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
-      {whyChooseUs.map((item, index) => (
-        <div
-          key={index}
-          className="flex items-center space-x-3 bg-gray-50 px-4 py-2 rounded-lg shadow-sm w-full max-w-sm"
-        >
-          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-          <span className="text-gray-700">{item}</span>
+      {/* Why Choose Timely Health */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="mb-8 text-2xl sm:text-3xl font-bold text-gray-800">
+            Why Choose Timely Health
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+            {whyChooseUs.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-3 bg-gray-50 px-4 py-2 rounded-lg shadow-sm w-full max-w-sm"
+              >
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Interactive CTA */}
       <section className="py-16 bg-gray-50">
@@ -232,9 +194,7 @@ const HomePage = () => {
             <h2 className="text-center mb-8">What Do You Need?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label className="block text-sm font-medium mb-2">
-                  Who are you?
-                </label>
+                <label className="block text-sm font-medium mb-2">Who are you?</label>
                 <div className="relative">
                   <select
                     value={selectedAudience}
@@ -251,9 +211,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">
-                  What are you looking for?
-                </label>
+                <label className="block text-sm font-medium mb-2">What are you looking for?</label>
                 <div className="relative">
                   <select
                     value={selectedNeed}
@@ -283,6 +241,69 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Live Chat Board */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <h2 className="text-center mb-6 text-2xl font-bold text-gray-800">Live Chat Board</h2>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                const name = e.target.name.value
+                const phone = e.target.phone.value
+                const message = e.target.message.value
+                if (!name || !phone || !message) {
+                  alert("Please fill all fields")
+                  return
+                }
+                const whatsappMessage = `Hi, my name is ${name}. My contact number is ${phone}. Here is my query: ${message}`
+                window.open(
+                  `https://wa.me/919010481048?text=${encodeURIComponent(whatsappMessage)}`,
+                  "_blank"
+                )
+              }}
+              className="space-y-6"
+            >
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Your Message</label>
+                <textarea
+                  name="message"
+                  placeholder="Type your query here..."
+                  rows="4"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                >
+                  Send on WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -295,12 +316,8 @@ const HomePage = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <blockquote className="mb-4 italic">
-                  "{testimonial.text}"
-                </blockquote>
-                <cite className="text-sm font-semibold">
-                  — {testimonial.author}, {testimonial.role}
-                </cite>
+                <blockquote className="mb-4 italic">"{testimonial.text}"</blockquote>
+                <cite className="text-sm font-semibold">— {testimonial.author}, {testimonial.role}</cite>
               </div>
             ))}
           </div>
@@ -310,12 +327,8 @@ const HomePage = () => {
       {/* Brand Promise */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6">
-            "Care You Can Trust. Right Where You Are."
-          </h2>
-          <p className="mb-8">
-            We believe healthcare should be simple, local, and always within reach — for everyone.
-          </p>
+          <h2 className="mb-6">"Care You Can Trust. Right Where You Are."</h2>
+          <p className="mb-8">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
           <button
             onClick={handleWhatsApp}
             className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
