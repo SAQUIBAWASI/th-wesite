@@ -118,13 +118,13 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="text-white px-6 py-12 lg:px-20 lg:py-16 bg-white bg-opacity-60">
         <div className="max-w-4xl mx-auto text-left">
-          <h1 className="mb-6 text-3xl md:text-5xl font-bold">
+          <h1 className="mb-6 text-3xl md:text-5xl font-bold font-calibri">
             Healthcare{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 font-calibri">
               That Comes to You
             </span>
           </h1>
-          <p className="mb-8 text-lg">
+          <p className="mb-8 text-lg font-sans">
             Timely Health delivers personalized care through a mix of digital and on-ground services — 
             right at your home, clinic, or community.
           </p>
@@ -168,10 +168,10 @@ const ServicesPage = () => {
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">{service.icon}</div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-2xl font-bold text-#007A52 mb-3 font-calibri">
                       {service.title}
                     </h3>
-                    <p className="text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-gray-700 mb-4 leading-relaxed font-sans">
                       {service.description}
                     </p>
                     <ul className="space-y-2">
@@ -197,7 +197,7 @@ const ServicesPage = () => {
       {/* Service CTAs */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-#007A52 mb-8 font-calibri">
             Ready to Get Started?
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -206,14 +206,14 @@ const ServicesPage = () => {
               className="flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             >
               <Phone size={20} />
-              <span>Book a Doctor</span>
+              <span className='font-sans'>Book a Doctor</span>
             </button>
             <button
               onClick={handleOrganizeCamp}
               className="flex items-center justify-center space-x-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
             >
               <Calendar size={20} />
-              <span>Organize a Health Camp</span>
+              <span className='font-sans'>Organize a Health Camp</span>
             </button>
             <button
               onClick={handleHealthPlan}
@@ -224,7 +224,7 @@ const ServicesPage = () => {
                 alt="WhatsApp"
                 className="w-6 h-6"
               />
-              <span>Get a Free Preventive Health Plan</span>
+              <span className='font-sans'>Get a Free Preventive Health Plan</span>
             </button>
           </div>
         </div>
@@ -233,15 +233,15 @@ const ServicesPage = () => {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold  mb-6 font-calibri">
             Have Questions About Our Services?
           </h2>
-          <p className="text-lg text-white mb-8 leading-relaxed">
+          <p className="text-lg text-white mb-8 leading-relaxed font-sans">
             Our health advisors are ready to help you choose the right service for your needs.
           </p>
           <button
             onClick={handleWhatsApp}
-            className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-green-500 transition-colors font-semibold"
+            className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-green-500 transition-colors font-semibold font-sans"
           >
             Chat with Our Health Advisor
           </button>

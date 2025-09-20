@@ -98,10 +98,10 @@ Please get back to me within 24 hours as mentioned on your website.`
   <section className="px-6 py-12 text-white bg-white lg:px-20 lg:py-16 bg-opacity-60">
     {/* Text */}
     <div className="max-w-4xl mx-auto text-left">
-      <h1 className="mb-6 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-black bg-clip-text">
+      <h1 className="mb-6 text-3xl font-bold text-transparent md:text-5xl bg-gradient-to-r from-blue-600 to-black bg-clip-text font-calibri">
         Talk to Timely Health
       </h1>
-      <p className="mb-8 text-lg">
+      <p className="mb-8 text-lg font-sans">
         Let's bring smarter healthcare to your home, workplace, or community.
       </p>
     </div>
@@ -131,11 +131,11 @@ Please get back to me within 24 hours as mentioned on your website.`
                   <div className="flex justify-center mb-4">
                     {method.icon}
                   </div>
-                  <h3 className="mb-2">{method.title}</h3>
+                  <h3 className="mb-2 font-calibri">{method.title}</h3>
                   <p className="mb-2 font-medium text-blue-600 group-hover:underline">
                     {method.info}
                   </p>
-                  <p className="text-sm text-gray-600">{method.description}</p>
+                  <p className="text-sm text-gray-600 font-sans">{method.description}</p>
                 </button>
               </div>
             ))}
@@ -148,56 +148,56 @@ Please get back to me within 24 hours as mentioned on your website.`
   <div className="w-full max-w-xl px-4">
     {/* Contact Form */}
     <div className="p-8 bg-white shadow-lg rounded-xl">
-      <h2 className="mb-6 text-center">Send Us a Message</h2>
+      <h2 className="mb-6 text-center font-calibri">Send Us a Message</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block mb-2">Name *</label>
-          <input
+          <label className="block mb-2 font-sans">Name *</label>
+          <input 
             type="text"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
             placeholder="Your full name"
           />
         </div>
 
         <div>
-          <label className="block mb-2">Email *</label>
+          <label className="block mb-2 font-calibri">Email *</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label className="block mb-2">Phone *</label>
+          <label className="block mb-2 font-calibri">Phone *</label>
           <input
             type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
             placeholder="+91 9876543210"
           />
         </div>
 
         <div>
-          <label className="block mb-2">What are you interested in? *</label>
+          <label className="block mb-2 font-calibri">What are you interested in? *</label>
           <select
             name="interest"
             value={formData.interest}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
           >
             <option value="">Select an option...</option>
             <option value="Doctor Consultation">Doctor Consultation</option>
@@ -210,14 +210,14 @@ Please get back to me within 24 hours as mentioned on your website.`
         </div>
 
         <div>
-          <label className="block mb-2">Message *</label>
+          <label className="block mb-2 font-calibri">Message *</label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleInputChange}
             required
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
             placeholder="Tell us more about your requirements..."
           />
         </div>

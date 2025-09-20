@@ -14,11 +14,10 @@ export default {
         green: {
           600: '#009966',
           700: '#007A52',
-        }
+        },
       },
       fontFamily: {
-        // Inter ko default sans font bana diya
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        calibri: ['Calibri', 'sans-serif'],
       },
       fontSize: {
         h1: ["2.25rem", { lineHeight: "2.5rem", fontWeight: "700" }],  // 36px bold
@@ -28,8 +27,8 @@ export default {
         small: ["0.875rem", { lineHeight: "1.25rem", fontWeight: "400" }], // 14px
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-in-from-bottom': 'slideInFromBottom 0.5s ease-out',
+        'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+        'slide-in-from-bottom': 'slideInFromBottom 0.5s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -44,4 +43,5 @@ export default {
     },
   },
   plugins: [],
-}
+};
+

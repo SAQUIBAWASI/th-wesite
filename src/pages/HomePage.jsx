@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
+
 const HomePage = () => {
   const [name, setName] = useState('')
   const [whatsapp, setWhatsapp] = useState('')
@@ -60,13 +61,38 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
   }
 
   const services = [
-    { icon: <Shield className="w-8 h-8 text-indigo-600" />, title: "Second Opinions", description: "Trusted expert inputs" },
-    { icon: <Home className="w-8 h-8 text-green-600" />, title: "Home Diagnostics", description: "Lab tests at home" },
-    { icon: <Heart className="w-8 h-8 text-red-600" />, title: "Wellness Sessions", description: "Yoga, stress relief, immunity" },
-    { icon: <Users className="w-8 h-8 text-purple-600" />, title: "Health Camps", description: "For RWAs & companies" },
-    { icon: <Stethoscope className="w-8 h-8 text-blue-600" />, title: "Doctor Consults", description: "Verified specialists" },
-    { icon: <Activity className="w-8 h-8 text-orange-600" />, title: "Community Meetups", description: "Group care & awareness" },
-  ]
+    {
+      icon: <Shield className="w-8 h-8 text-indigo-600" />,
+      title: "Second Opinions",
+      description: <p className="font-sans">Trusted expert inputs</p>
+    },
+    {
+      icon: <Home className="w-8 h-8 text-green-600" />,
+      title: "Home Diagnostics",
+      description: <p className="font-sans">Lab tests at home</p>
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-600" />,
+      title: "Wellness Sessions",
+      description: <p className="font-sans">Yoga, stress relief, immunity</p>
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-600" />,
+      title: "Health Camps",
+      description: <p className="font-sans">For RWAs & companies</p>
+    },
+    {
+      icon: <Stethoscope className="w-8 h-8 text-blue-600" />,
+      title: "Doctor Consults",
+      description: <p className="font-sans">Verified specialists</p>
+    },
+    {
+      icon: <Activity className="w-8 h-8 text-orange-600" />,
+      title: "Community Meetups",
+      description: <p className="font-sans">Group care & awareness</p>
+    },
+  ];
+
 
   const whyChooseUs = [
     "✔️ Local-first Care",
@@ -83,34 +109,34 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="grid items-center grid-cols-1 gap-12 px-6 mx-auto max-w-7xl lg:px-8 lg:grid-cols-2">
-          {/* Left Side - Text Content */}
+
           <div>
-            <h1 className="mb-6">
+            <h1 className="mb-6 font-calibri animate-fade-in">
               Trusted Healthcare,{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
                 Just Around the Corner
               </span>
             </h1>
-            <p className="mb-6">
+            <p className="mb-6 font-calibri">
               Bringing doctors, diagnostics, and wellness programs closer to your home — online and offline.
             </p>
 
-            {/* CTA Buttons */}
+
             <div className="flex gap-4 mb-8">
-               <button
-              onClick={handleWhatsApp}
-              className="flex items-center justify-center w-14 h-14 transition bg-gray-100 rounded-full shadow hover:shadow-md"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp"
-                className="w-6 h-6"
-              />
-            </button>
+              <button
+                onClick={handleWhatsApp}
+                className="flex items-center justify-center w-14 h-14 transition bg-gray-100 rounded-full shadow hover:shadow-md"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                  className="w-6 h-6"
+                />
+              </button>
               <button
                 onClick={handleBookCamp}
                 className="flex items-center justify-center text-white transition-colors bg-blue-600 rounded-full w-14 h-14 hover:bg-blue-700"
@@ -125,11 +151,11 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
               </button>
             </div>
 
-            {/* Emotional Story Hook */}
+
             <div className="p-6 shadow-md bg-gradient-to-r from-blue-50 to-green-50 rounded-xl">
-              <blockquote className="mb-4 italic">
-                "When Meena's mother experienced chest pain late one evening, she needed urgent advice. 
-                Through Timely Health, she connected with a verified local cardiologist — within 30 minutes. 
+              <blockquote className="mb-4 font-sans">
+                "When Meena's mother experienced chest pain late one evening, she needed urgent advice.
+                Through Timely Health, she connected with a verified local cardiologist — within 30 minutes.
                 Today, she says: 'Timely Health gave us peace of mind when we needed it most.'"
               </blockquote>
               <p className="mb-4 font-semibold">
@@ -144,7 +170,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
             </div>
           </div>
 
-          {/* Right Side - Image */}
+
           <div className="flex justify-center">
             <img
               src="/assets/images/s2.jpg"
@@ -155,10 +181,10 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
         </div>
       </section>
 
-      {/* Service Snapshot */}
+
       <section className="py-16 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <h2 className="mb-12 text-center">Our Services Snapshot</h2>
+          <h2 className="mb-12 text-center font-calibri">Our Services Snapshot</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <div key={index} className="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
@@ -176,20 +202,21 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
       {/* Why Choose Timely Health */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-2xl font-bold text-gray-800 sm:text-3xl">
+          <h2 className="mb-8 text-2xl font-bold  sm:text-3xl">
             Why Choose Timely Health
           </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-items-center">
+          <div  className="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-items-center">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
                 className="flex items-center w-full max-w-sm px-4 py-2 space-x-3 rounded-lg shadow-sm bg-gray-50"
               >
                 <CheckCircle className="flex-shrink-0 w-5 h-5 text-green-600" />
-                <span className="text-gray-700">{item}</span>
+                <span className="text-gray-700 font-sans">{item}</span>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -197,12 +224,12 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="p-8 bg-white shadow-lg rounded-xl">
-            <h2 className="mb-8 text-center">What Do You Need?</h2>
+            <h2 className="mb-8 text-center font-calibri">What Do You Need?</h2>
             <div className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
 
               {/* Name Input */}
               <div className="md:col-span-1">
-                <label className="block mb-2 text-sm font-medium">Your Name</label>
+                <label className="block mb-2 text-sm font-medium font-sans">Your Name</label>
                 <input
                   type="text"
                   value={name}
@@ -214,7 +241,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* WhatsApp Number Input */}
               <div className="md:col-span-1">
-                <label className="block mb-2 text-sm font-medium">WhatsApp Number</label>
+                <label className="block mb-2 text-sm font-medium font-sans">WhatsApp Number</label>
                 <input
                   type="tel"
                   value={whatsapp}
@@ -226,7 +253,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* Who are you? */}
               <div>
-                <label className="block mb-2 text-sm font-medium">Who are you?</label>
+                <label className="block mb-2 text-sm font-medium font-sans">Who are you?</label>
                 <div className="relative">
                   <select
                     value={selectedAudience}
@@ -245,12 +272,12 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* What are you looking for? */}
               <div>
-                <label className="block mb-2 text-sm font-medium">What are you looking for?</label>
+                <label className="block mb-2 text-sm font-medium font-sans">What are you looking for?</label>
                 <div className="relative">
                   <select
                     value={selectedNeed}
                     onChange={(e) => setSelectedNeed(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
                   >
                     <option value="">Select...</option>
                     <option value="Doctor">Doctor</option>
@@ -279,8 +306,8 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
       {/* Testimonials */}
       <section className="py-16 bg-white">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <h2 className="mb-12 text-center">Real Testimonials</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <h2 className="mb-12 text-center font-calibri">Real Testimonials</h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 font-sans">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="p-6 bg-gray-50 rounded-xl">
                 <div className="flex items-center mb-4">
@@ -288,22 +315,78 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <blockquote className="mb-4 italic">"{testimonial.text}"</blockquote>
-                <cite className="text-sm font-semibold">— {testimonial.author}, {testimonial.role}</cite>
+                <blockquote className="mb-4 font-sans">"{testimonial.text}"</blockquote>
+                <cite className="text-sm font-semibold font-sans">— {testimonial.author}, {testimonial.role}</cite>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-start", // align at the top instead of center
+          padding: "5px 0", // add small top-bottom spacing
+          background: "#f9f9f9",
+        }}
+      >
+        <div
+          style={{
+            background: "#fff2ec",
+            borderRadius: "10px",
+            padding: "5px",
+            width: "320px",
+            textAlign: "center",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h2>
+            <span style={{ color: "#4285F4" }}>G</span>
+            <span style={{ color: "#EA4335" }}>o</span>
+            <span style={{ color: "#FBBC05" }}>o</span>
+            <span style={{ color: "#4285F4" }}>g</span>
+            <span style={{ color: "#34A853" }}>l</span>
+            <span style={{ color: "#EA4335" }}>e</span>
+            <span style={{ color: "#555" }}> Reviews</span>
+          </h2>
+
+          <div style={{ fontSize: "22px", color: "#FFD700", margin: "10px 0" }}>
+            ★★★★★
+          </div>
+
+          <a
+            href="https://search.google.com/local/writereview?placeid=ChIJ89efNxeRyzsR5LXCKSPORfQ
+"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              padding: "10px 15px",
+              border: "2px solid #0c7a56",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontSize: "16px",
+              color: "#0c7a56",
+              fontWeight: "500",
+              marginTop: "10px",
+            }}
+          >
+            👉 To give us a rating, click here.
+          </a>
+        </div>
+      </div>
+
+
       {/* Brand Promise */}
-      <section className="py-20 text-center text-white bg-gradient-to-r from-blue-500 to-green-500">
+      <section className="py-20 pb-10 text-center text-white bg-gradient-to-r from-blue-500 to-green-500">
         <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-white">"Care You Can Trust. Right Where You Are."</h2>
-          <p className="mb-8 text-white">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
+          <h2 className="mb-6 text-white font-calibri">"Care You Can Trust. Right Where You Are."</h2>
+          <p className="mb-8 text-white font-sans">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
           <button
             onClick={handleWhatsApp}
-            className="px-8 py-4 font-semibold text-blue-600 transition-colors bg-white rounded-lg hover:bg-green-500"
+            className="px-8 py-4 font-semibold text-blue-600 transition-colors bg-white rounded-lg hover:bg-green-500 font-calibri"
           >
             Get Started Today
           </button>

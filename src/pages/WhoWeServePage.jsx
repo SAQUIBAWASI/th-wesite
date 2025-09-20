@@ -68,13 +68,13 @@ const WhoWeServePage = () => {
 <section className="text-white px-6 py-12 lg:px-20 lg:py-16 bg-white bg-opacity-60">
   {/* Text */}
   <div className="max-w-4xl mx-auto text-left">
-    <h1 className="mb-6 text-3xl md:text-5xl font-bold">
+    <h1 className="mb-6 text-3xl md:text-5xl font-bold font-calibri">
       Personalized{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-calibri">
         Care for Every Community
       </span>
     </h1>
-    <p className="mb-8 text-lg">
+    <p className="mb-8 text-lg font-sans">
       Whether you're a family, a working professional, an RWA leader, or a corporate team — 
       Timely Health brings the right healthcare to your doorstep.
     </p>
@@ -101,7 +101,7 @@ const WhoWeServePage = () => {
       {/* Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>
+          <p className='font-sans'>
             We understand that different groups have different healthcare needs. That's why we've
             designed specialized programs and services tailored to serve families, communities,
             businesses, and healthcare providers effectively.
@@ -119,8 +119,8 @@ const WhoWeServePage = () => {
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">{audience.icon}</div>
                     <div className="flex-1">
-                      <h3 className="mb-3">{audience.title}</h3>
-                      <p className="mb-6">{audience.description}</p>
+                      <h3 className="mb-3 font-calibri">{audience.title}</h3>
+                      <p className="mb-6 font-sans">{audience.description}</p>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                         {audience.services.map((service, idx) => (
@@ -150,29 +150,29 @@ const WhoWeServePage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="mb-4">Success Stories</h2>
-            <p>See how we've made a difference for our diverse community of users</p>
+            <h2 className="mb-4 font-calibri">Success Stories</h2>
+            <p className='font-sans'>See how we've made a difference for our diverse community of users</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl">
-              <h3 className="mb-4">RWA Health Camp Success</h3>
-              <p className="mb-4">
+              <h3 className="mb-4 font-calibri">RWA Health Camp Success</h3>
+              <p className="mb-4 font-sans">
                 "We organized a health camp for 200+ residents in our society. Timely Health provided
                 5 specialist doctors, diagnostic equipment, and handled all logistics seamlessly.
                 The response was overwhelming!"
               </p>
-              <cite>— Priya Sharma, RWA Secretary, Gachibowli</cite>
+              <cite className='font-sans'>— Priya Sharma, RWA Secretary, Gachibowli</cite>
             </div>
 
             <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl">
-              <h3 className="mb-4">Corporate Wellness Program</h3>
-              <p className="mb-4">
+              <h3 className="mb-4 font-calibri">Corporate Wellness Program</h3>
+              <p className="mb-4 font-sans">
                 "Our employee wellness program with Timely Health saw 85% participation. The on-site
                 health checkups and stress management workshops significantly improved our team's
                 overall wellbeing and productivity."
               </p>
-              <cite>— Rajesh Kumar, HR Director, Tech Company</cite>
+              <cite className='font-sans'>— Rajesh Kumar, HR Director, Tech Company</cite>
             </div>
           </div>
         </div>
@@ -181,16 +181,16 @@ const WhoWeServePage = () => {
       {/* Partner Invitation */}
       <section className="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6 text-white">
+          <h2 className="mb-6 text-white font-calibri">
             Are you a community leader or corporate wellness head?
           </h2>
-          <p className="mb-8 text-white">
+          <p className="mb-8 text-white font-sans">
             Let's create a customized health engagement plan for your people.
             We'll work with you to design programs that meet your specific needs and goals.
           </p>
           <button
             onClick={handleStrategyCall}
-            className="px-8 py-4 bg-white text-blue-500 rounded-lg hover:bg-green-500 transition-colors font-semibold"
+            className="px-8 py-4 bg-white text-blue-500 rounded-lg hover:bg-green-500 transition-colors font-semibold font-sans"
           >
             Schedule a Strategy Call
           </button>
@@ -200,8 +200,8 @@ const WhoWeServePage = () => {
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6">Ready to Get Started?</h2>
-          <p className="mb-8">
+          <h2 className="mb-6 font-calibri">Ready to Get Started?</h2>
+          <p className="mb-8 font-sans">
             No matter which group you represent, we're here to create a healthcare solution
             that works perfectly for your unique needs.
           </p>
@@ -215,14 +215,14 @@ const WhoWeServePage = () => {
                 alt="WhatsApp"
                 className="w-6 h-6"
               />
-              <span>Chat with Our Team</span>
+              <span className='font-calibri'>Chat with Our Team</span>
             </button>
             <button
               onClick={handleStrategyCall}
               className="flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Calendar size={20} />
-              <span>Schedule a Consultation</span>
+              <span className='font-sans'>Schedule a Consultation</span>
             </button>
           </div>
         </div>
