@@ -305,78 +305,73 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
       {/* Testimonials */}
       <section className="py-16 bg-white">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <h2 className="mb-12 text-center font-calibri">Real Testimonials</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 font-sans">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="p-6 bg-gray-50 rounded-xl">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="mb-4 font-sans">"{testimonial.text}"</blockquote>
-                <cite className="text-sm font-semibold font-sans">— {testimonial.author}, {testimonial.role}</cite>
-              </div>
+  <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    {/* Testimonials Heading */}
+    <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 font-sans">
+      Real Testimonials
+    </h2>
+
+    {/* Testimonials Grid */}
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 font-sans">
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+        >
+          {/* Star Rating */}
+          <div className="flex items-center mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className="w-5 h-5 text-yellow-400 fill-current"
+              />
             ))}
           </div>
+
+          {/* Testimonial Text */}
+          <blockquote className="mb-4 text-gray-700 italic">
+            “{testimonial.text}”
+          </blockquote>
+
+          {/* Author */}
+          <cite className="text-sm font-semibold text-gray-900">
+            — {testimonial.author}, {testimonial.role}
+          </cite>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start", // align at the top instead of center
-          padding: "5px 0", // add small top-bottom spacing
-          background: "#f9f9f9",
-        }}
-      >
-        <div
-          style={{
-            background: "#fff2ec",
-            borderRadius: "10px",
-            padding: "5px",
-            width: "320px",
-            textAlign: "center",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-          }}
-        >
-          <h2>
-            <span style={{ color: "#4285F4" }}>G</span>
-            <span style={{ color: "#EA4335" }}>o</span>
-            <span style={{ color: "#FBBC05" }}>o</span>
-            <span style={{ color: "#4285F4" }}>g</span>
-            <span style={{ color: "#34A853" }}>l</span>
-            <span style={{ color: "#EA4335" }}>e</span>
-            <span style={{ color: "#555" }}> Reviews</span>
-          </h2>
+{/* Google Reviews CTA */}
+<div className="flex justify-center py-5 bg-gray-50">
+  <div className="w-full max-w-sm p-6 text-center bg-[#fff2ec] rounded-xl shadow-md">
+    {/* Google Styled Heading */}
+    <h2 className="text-2xl font-bold mb-3">
+      <span className="text-[#4285F4]">G</span>
+      <span className="text-[#EA4335]">o</span>
+      <span className="text-[#FBBC05]">o</span>
+      <span className="text-[#4285F4]">g</span>
+      <span className="text-[#34A853]">l</span>
+      <span className="text-[#EA4335]">e</span>
+      <span className="text-gray-700"> Reviews</span>
+    </h2>
 
-          <div style={{ fontSize: "22px", color: "#FFD700", margin: "10px 0" }}>
-            ★★★★★
-          </div>
+    {/* Stars */}
+    <div className="text-2xl text-yellow-400 mb-4">★★★★★</div>
 
-          <a
-            href="https://search.google.com/local/writereview?placeid=ChIJ89efNxeRyzsR5LXCKSPORfQ
-"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              padding: "10px 15px",
-              border: "2px solid #0c7a56",
-              borderRadius: "8px",
-              textDecoration: "none",
-              fontSize: "16px",
-              color: "#0c7a56",
-              fontWeight: "500",
-              marginTop: "10px",
-            }}
-          >
-            👉 To give us a rating, click here.
-          </a>
-        </div>
-      </div>
+    {/* CTA Button */}
+    <a
+      href="https://search.google.com/local/writereview?placeid=ChIJ89efNxeRyzsR5LXCKSPORfQ"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block px-5 py-2 text-lg font-medium text-[#0c7a56] border-2 border-[#0c7a56] rounded-lg hover:bg-[#0c7a56] hover:text-white transition"
+    >
+      👉 Give us a rating
+    </a>
+  </div>
+</div>
+
 
 
       {/* Brand Promise */}
