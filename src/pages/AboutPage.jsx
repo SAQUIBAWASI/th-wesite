@@ -41,36 +41,34 @@ const AboutPage = () => {
       {/* Hero Section */}
      {/* Hero Section */}
 {/* Hero Section */}
-<section className="text-white px-6 py-12 lg:px-20 lg:py-16 bg-white bg-opacity-60">
+<section className="px-6 py-5 text-white bg-white lg:px-20 lg:py-5 bg-opacity-60">
   {/* Text */}
   <div className="max-w-4xl mx-auto text-left">
-    <h1 className="mb-6 text-3xl md:text-5xl font-bold font-calibri">
+    <h1 className="mb-6 text-3xl font-bold md:text-5xl font-calibri">
       Our Vision for a{" "}
       <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-calibri">
         Healthier, Closer Future
       </span>
     </h1>
-    <p className="mb-8 text-lg font-sans">
+    <p className="mb-8 font-sans text-lg">
       We're not just a healthcare platform — we're your neighborhood's health partner.
     </p>
   </div>
 
   {/* Image */}
-  <div className="max-w-5xl mx-auto">
+  <div className="max-w-4xl mx-auto">
   <img
     src="/assets/images/s2.jpg"
     alt="Healthcare Services"
-    className="w-full h-80 rounded-lg shadow-lg object-cover"
+    className="object-cover w-full rounded-lg shadow-lg h-100"
   />
 </div>
 
 </section>
 
-
-
       {/* Intro Statement */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-5 bg-white">
+        <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="text-center">
             <p className='font-sans'>
               We connect people to care that's personal, accessible, and built around community. 
@@ -83,13 +81,13 @@ const AboutPage = () => {
 
       
       {/* Our Story */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-5 bg-gradient-to-r from-blue-50 to-green-50">
+        <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
             <h2 className="mb-6 font-calibri">Our Story</h2>
           </div>
           
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div className="p-8 bg-white shadow-lg rounded-xl">
             <p className="mb-6 font-sans">
               Timely Health was born from a simple observation: healthcare in urban India is often 
               fragmented, impersonal, and difficult to navigate. Families struggle to find trusted 
@@ -115,11 +113,11 @@ const AboutPage = () => {
 
       {/* Mission and Vision */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Mission */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center space-x-4 mb-6">
+            <div className="p-8 bg-white shadow-lg rounded-xl">
+              <div className="flex items-center mb-6 space-x-4">
                 <Target className="w-12 h-12 text-blue-600" />
                 <h2 className='font-calibri'>Our Mission</h2>
               </div>
@@ -131,8 +129,8 @@ const AboutPage = () => {
             </div>
 
             {/* Vision */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center space-x-4 mb-6">
+            <div className="p-8 bg-white shadow-lg rounded-xl">
+              <div className="flex items-center mb-6 space-x-4">
                 <Eye className="w-12 h-12 text-green-600" />
                 <h2 className='font-calibri'>Our Vision</h2>
               </div>
@@ -148,18 +146,18 @@ const AboutPage = () => {
 
       {/* Core Values */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
             <h2 className="mb-4 font-calibri">Our Core Values</h2>
             <p className='font-sans'>
               These principles guide everything we do at Timely Health
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {values.map((value, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <div className="flex items-center space-x-4 mb-4">
+              <div key={index} className="p-6 transition-shadow bg-gray-50 rounded-xl hover:shadow-lg">
+                <div className="flex items-center mb-4 space-x-4">
                   {value.icon}
                   <h3 className='font-calibri'>{value.title}</h3>
                 </div>
@@ -173,7 +171,7 @@ const AboutPage = () => {
 
       {/* Call to Action */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-calibri">
             Ready to Experience Healthcare That Cares?
           </h2>
@@ -182,7 +180,7 @@ const AboutPage = () => {
           </p>
           <button
             onClick={handleWhatsApp}
-            className="px-8 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-sans"
+            className="px-8 py-4 font-sans text-white transition-colors bg-green-600 rounded-lg hover:bg-green-700"
           >
             Start Your Health Journey With Us
           </button>

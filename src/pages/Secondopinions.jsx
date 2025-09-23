@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-
 export default function SecondOpinionService() {
+  
   const fileInputRef = useRef(null);
 
   const handleFileUpload = () => {
@@ -33,7 +33,7 @@ export default function SecondOpinionService() {
               <h1 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Second Opinions — Make informed decisions with clarity
               </h1>
-              <p className="max-w-xl text-white mt-4 text-lg sm:text-xl">
+              <p className="max-w-xl mt-4 text-lg text-white sm:text-xl">
                 Our expert team provides unbiased second opinions on your
                 medical reports — with detailed analysis, treatment
                 alternatives, and guidance for confident decision-making.

@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // ✅ React Router Link import
-
 export default function WellnessWorkshops() {
+  
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen text-gray-800 bg-gray-50">
       {/* HERO */}
-      <header className="bg-gradient-to-r from-purple-200 to-pink-200 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-12 lg:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <header className="text-white bg-gradient-to-r from-purple-200 to-pink-200">
+        <div className="max-w-6xl px-6 py-12 mx-auto lg:py-16">
+          <div className="grid items-center grid-cols-1 gap-10 lg:grid-cols-2">
             {/* TEXT BLOCK */}
             <motion.div
               initial={{ x: -40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight ">
+              <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl ">
                 Wellness Workshops — Learn, Heal & Grow Together
               </h1>
-              <p className="mt-4 text-lg sm:text-xl max-w-xl">
+              <p className="max-w-xl mt-4 text-lg sm:text-xl">
                 Join our expert-led wellness workshops designed to nurture your
                 body, mind, and soul. From stress management to holistic
                 healing, gain practical tools for a healthier lifestyle.
               </p>
 
-              <div className="mt-8 flex gap-3 flex-wrap">
+              <div className="flex flex-wrap gap-3 mt-8">
                 <a
                   href="#workshops"
-                  className="inline-block bg-white text-purple-400 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg"
+                  className="inline-block px-6 py-3 font-semibold text-purple-400 bg-white rounded-lg shadow-md hover:shadow-lg"
                 >
                   Explore Workshops
                 </a>
                 <a
                   href="#faq"
-                  className="inline-block border border-white/30 text-white px-5 py-3 rounded-lg hover:bg-white/10"
+                  className="inline-block px-5 py-3 text-white border rounded-lg border-white/30 hover:bg-white/10"
                 >
                   FAQs
                 </a>
@@ -46,7 +46,7 @@ export default function WellnessWorkshops() {
               transition={{ duration: 0.6 }}
               className="w-full"
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl bg-white">
+              <div className="overflow-hidden bg-white shadow-2xl rounded-2xl">
                 <img
                   src="/assets/images/s1.jpg"
                   alt="Wellness workshop"
@@ -59,16 +59,16 @@ export default function WellnessWorkshops() {
       </header>
 
       {/* MAIN */}
-      <main className="max-w-6xl mx-auto px-6 py-14">
+      <main className="max-w-6xl px-6 mx-auto py-14">
         {/* WORKSHOPS */}
         <section id="workshops" className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center">
+          <h3 className="mb-8 text-2xl font-bold text-center">
             Upcoming Wellness Workshops
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg">
-              <h4 className="font-bold text-lg text-purple-400">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="p-6 text-center bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-purple-400">
                 Mindfulness & Meditation
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -76,8 +76,8 @@ export default function WellnessWorkshops() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg">
-              <h4 className="font-bold text-lg text-purple-400">
+            <div className="p-6 text-center bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-purple-400">
                 Nutrition for Energy
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -85,8 +85,8 @@ export default function WellnessWorkshops() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg">
-              <h4 className="font-bold text-lg text-purple-400">
+            <div className="p-6 text-center bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-purple-400">
                 Yoga for Wellness
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -98,12 +98,12 @@ export default function WellnessWorkshops() {
 
         {/* FAQ */}
         <section id="faq" className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-center">
+          <h3 className="mb-6 text-2xl font-bold text-center">
             Frequently Asked Questions
           </h3>
 
-          <div className="space-y-3 max-w-3xl mx-auto">
-            <details className="bg-white p-5 rounded-lg shadow-sm">
+          <div className="max-w-3xl mx-auto space-y-3">
+            <details className="p-5 bg-white rounded-lg shadow-sm">
               <summary className="font-semibold cursor-pointer">
                 Do I need prior experience to join?
               </summary>
@@ -113,7 +113,7 @@ export default function WellnessWorkshops() {
               </p>
             </details>
 
-            <details className="bg-white p-5 rounded-lg shadow-sm">
+            <details className="p-5 bg-white rounded-lg shadow-sm">
               <summary className="font-semibold cursor-pointer">
                 Are sessions available online?
               </summary>
@@ -122,7 +122,7 @@ export default function WellnessWorkshops() {
               </p>
             </details>
 
-            <details className="bg-white p-5 rounded-lg shadow-sm">
+            <details className="p-5 bg-white rounded-lg shadow-sm">
               <summary className="font-semibold cursor-pointer">
                 How can I register?
               </summary>
@@ -136,7 +136,7 @@ export default function WellnessWorkshops() {
         {/* CTA */}
         <section
           id="contact"
-          className="bg-purple-50 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md"
+          className="flex flex-col items-center justify-between gap-6 p-8 shadow-md bg-purple-50 rounded-2xl md:flex-row"
         >
           <div>
             <h4 className="text-xl font-bold">Ready to Join?</h4>
@@ -148,13 +148,13 @@ export default function WellnessWorkshops() {
           <div className="flex gap-3">
             <Link
               to="/contact"
-              className="inline-block bg-purple-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-700"
+              className="inline-block px-6 py-3 text-white bg-purple-400 rounded-lg shadow-md hover:bg-purple-700"
             >
               Join Workshop
             </Link>
             <Link
               to="/contact"
-              className="inline-block border border-purple-400 text-purple-400 px-5 py-3 rounded-lg hover:bg-purple-50"
+              className="inline-block px-5 py-3 text-purple-400 border border-purple-400 rounded-lg hover:bg-purple-50"
             >
               Contact Us
             </Link>

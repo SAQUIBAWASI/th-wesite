@@ -1,11 +1,9 @@
 import {
   Activity,
-  Calendar,
   CheckCircle,
   ChevronDown,
   Heart,
   Home,
-  Search,
   Shield,
   Star,
   Stethoscope,
@@ -108,28 +106,28 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
     { text: "Timely Health helped my clinic reach 3x more patients — highly professional.", author: "Dr. Anil M.", role: "ENT Specialist" }
   ]
 
-  return (
-    <div className="min-h-screen ">
+    return (
+    <div>
       {/* Hero Section */}
-      <section className="py-20 bg-white">
-        <div className="grid items-center grid-cols-1 gap-12 px-6 mx-auto max-w-7xl lg:px-8 lg:grid-cols-2">
-
-          <div>
-            <h1 className="mb-6 font-calibri animate-fade-in">
-              Trusted Healthcare,{' '}
+      <section className="py-5 bg-white">
+        <div className="grid items-stretch grid-cols-1 gap-12 px-6 mx-auto max-w-7xl lg:px-8 lg:grid-cols-2">
+          {/* Left Side Text */}
+          <div className="flex flex-col justify-center">
+            <h1 className="mb-6 text-3xl font-bold font-calibri animate-fade-in md:text-5xl">
+              Trusted Healthcare,{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
                 Just Around the Corner
               </span>
             </h1>
-            <p className="mb-6 font-calibri">
-              Bringing doctors, diagnostics, and wellness programs closer to your home — online and offline.
+            <p className="mb-6 text-lg font-calibri">
+              Bringing doctors, diagnostics, and wellness programs closer to
+              your home — online and offline.
             </p>
 
-
-            <div className="flex gap-4 mb-8">
+            {/* <div className="flex gap-4 mb-8">
               <button
                 onClick={handleWhatsApp}
-                className="flex items-center justify-center w-14 h-14 transition bg-gray-100 rounded-full shadow hover:shadow-md"
+                className="flex items-center justify-center transition bg-gray-100 rounded-full shadow w-14 h-14 hover:shadow-md"
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -149,16 +147,17 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
               >
                 <Search size={22} />
               </button>
-            </div>
-
+            </div> */}
 
             <div className="p-6 shadow-md bg-gradient-to-r from-blue-50 to-green-50 rounded-xl">
-              <blockquote className="mb-4 font-sans">
-                "When Meena's mother experienced chest pain late one evening, she needed urgent advice.
-                Through Timely Health, she connected with a verified local cardiologist — within 30 minutes.
-                Today, she says: 'Timely Health gave us peace of mind when we needed it most.'"
+              <blockquote className="mb-4 font-sans italic text-gray-700">
+                "When Meena's mother experienced chest pain late one evening, she
+                needed urgent advice. Through Timely Health, she connected with
+                a verified local cardiologist — within 30 minutes. Today, she
+                says: 'Timely Health gave us peace of mind when we needed it
+                most.'"
               </blockquote>
-              <p className="mb-4 font-semibold">
+              <p className="mb-4 font-semibold text-gray-800">
                 You deserve that peace of mind too.
               </p>
               <button
@@ -170,17 +169,16 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
             </div>
           </div>
 
-
-          <div className="flex justify-center">
+          {/* Right Side Image */}
+          <div className="flex">
             <img
               src="/assets/images/s2.jpg"
               alt="Healthcare Support"
-              className="object-cover w-full h-auto shadow-lg rounded-2xl"
+              className="object-cover w-full h-full shadow-lg rounded-2xl"
             />
           </div>
         </div>
       </section>
-
 
       <section className="py-16 bg-gray-50">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -198,11 +196,10 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
           </div>
         </div>
       </section>
-
       {/* Why Choose Timely Health */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-2xl font-bold  sm:text-3xl">
+          <h2 className="mb-8 text-2xl font-bold sm:text-3xl">
             Why Choose Timely Health
           </h2>
           <div  className="grid grid-cols-1 gap-4 sm:grid-cols-2 justify-items-center">
@@ -212,7 +209,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
                 className="flex items-center w-full max-w-sm px-4 py-2 space-x-3 rounded-lg shadow-sm bg-gray-50"
               >
                 <CheckCircle className="flex-shrink-0 w-5 h-5 text-green-600" />
-                <span className="text-gray-700 font-sans">{item}</span>
+                <span className="font-sans text-gray-700">{item}</span>
               </div>
             ))}
           </div>
@@ -229,7 +226,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* Name Input */}
               <div className="md:col-span-1">
-                <label className="block mb-2 text-sm font-medium font-sans">Your Name</label>
+                <label className="block mb-2 font-sans text-sm font-medium">Your Name</label>
                 <input
                   type="text"
                   value={name}
@@ -241,7 +238,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* WhatsApp Number Input */}
               <div className="md:col-span-1">
-                <label className="block mb-2 text-sm font-medium font-sans">WhatsApp Number</label>
+                <label className="block mb-2 font-sans text-sm font-medium">WhatsApp Number</label>
                 <input
                   type="tel"
                   value={whatsapp}
@@ -253,7 +250,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* Who are you? */}
               <div>
-                <label className="block mb-2 text-sm font-medium font-sans">Who are you?</label>
+                <label className="block mb-2 font-sans text-sm font-medium">Who are you?</label>
                 <div className="relative">
                   <select
                     value={selectedAudience}
@@ -272,12 +269,12 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 
               {/* What are you looking for? */}
               <div>
-                <label className="block mb-2 text-sm font-medium font-sans">What are you looking for?</label>
+                <label className="block mb-2 font-sans text-sm font-medium">What are you looking for?</label>
                 <div className="relative">
                   <select
                     value={selectedNeed}
                     onChange={(e) => setSelectedNeed(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-sans"
+                    className="w-full px-4 py-3 font-sans border border-gray-300 rounded-lg appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select...</option>
                     <option value="Doctor">Doctor</option>
@@ -307,16 +304,16 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
       <section className="py-16 bg-white">
   <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     {/* Testimonials Heading */}
-    <h2 className="mb-12 text-3xl font-bold text-center text-gray-800 font-sans">
+    <h2 className="mb-12 font-sans text-3xl font-bold text-center text-gray-800">
       Real Testimonials
     </h2>
 
     {/* Testimonials Grid */}
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 font-sans">
+    <div className="grid grid-cols-1 gap-8 font-sans md:grid-cols-2">
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition"
+          className="p-6 transition shadow bg-gray-50 rounded-xl hover:shadow-md"
         >
           {/* Star Rating */}
           <div className="flex items-center mb-4">
@@ -329,7 +326,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
           </div>
 
           {/* Testimonial Text */}
-          <blockquote className="mb-4 text-gray-700 italic">
+          <blockquote className="mb-4 italic text-gray-700">
             “{testimonial.text}”
           </blockquote>
 
@@ -347,7 +344,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
 <div className="flex justify-center py-5 bg-gray-50">
   <div className="w-full max-w-sm p-6 text-center bg-[#fff2ec] rounded-xl shadow-md">
     {/* Google Styled Heading */}
-    <h2 className="text-2xl font-bold mb-3">
+    <h2 className="mb-3 text-2xl font-bold">
       <span className="text-[#4285F4]">G</span>
       <span className="text-[#EA4335]">o</span>
       <span className="text-[#FBBC05]">o</span>
@@ -358,7 +355,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
     </h2>
 
     {/* Stars */}
-    <div className="text-2xl text-yellow-400 mb-4">★★★★★</div>
+    <div className="mb-4 text-2xl text-yellow-400">★★★★★</div>
 
     {/* CTA Button */}
     <a
@@ -378,7 +375,7 @@ I am a ${selectedAudience} looking for ${selectedNeed}. Please help me get start
       <section className="py-20 pb-10 text-center text-white bg-gradient-to-r from-blue-500 to-green-500">
         <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
           <h2 className="mb-6 text-white font-calibri">"Care You Can Trust. Right Where You Are."</h2>
-          <p className="mb-8 text-white font-sans">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
+          <p className="mb-8 font-sans text-white">We believe healthcare should be simple, local, and always within reach — for everyone.</p>
           <button
             onClick={handleWhatsApp}
             className="px-8 py-4 font-semibold text-blue-600 transition-colors bg-white rounded-lg hover:bg-green-500 font-calibri"

@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // ✅ add import
-
 export default function CorporateHealthPrograms() {
+ 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen text-gray-800 bg-gray-50">
       {/* HERO */}
-      <header className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-14 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <header className="text-white bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="max-w-6xl px-6 mx-auto py-14 lg:py-20">
+          <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
             {/* TEXT BLOCK */}
             <motion.div
               initial={{ x: -40, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
+              <h1 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Corporate Health Programs — Empower Your Workforce
               </h1>
-              <p className="mt-4 text-lg sm:text-xl max-w-xl text-white opacity-90">
+              <p className="max-w-xl mt-4 text-lg text-white sm:text-xl opacity-90">
                 Boost employee productivity and well-being with our tailored
                 workplace health solutions — from checkups to wellness workshops.
               </p>
 
-              <div className="mt-8 flex gap-3 flex-wrap">
+              <div className="flex flex-wrap gap-3 mt-8">
                 {/* ✅ changed <a> to <Link> */}
                 <Link
                   to="/contact"
-                  className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg"
+                  className="inline-block px-6 py-3 font-semibold bg-white rounded-lg shadow-md text-cyan-700 hover:shadow-lg"
                 >
                   Get a Proposal
                 </Link>
                 <a
                   href="#faq"
-                  className="inline-block border border-white/40 text-white px-5 py-3 rounded-lg hover:bg-white/10"
+                  className="inline-block px-5 py-3 text-white border rounded-lg border-white/40 hover:bg-white/10"
                 >
                   FAQs
                 </a>
@@ -46,7 +46,7 @@ export default function CorporateHealthPrograms() {
               transition={{ duration: 0.6 }}
               className="w-full"
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl bg-white">
+              <div className="overflow-hidden bg-white shadow-xl rounded-2xl">
                 <img
                   src="/assets/images/h3.jpg"
                   alt="Corporate health program"
@@ -59,17 +59,17 @@ export default function CorporateHealthPrograms() {
       </header>
 
       {/* MAIN */}
-      <main className="max-w-6xl mx-auto px-6 py-14">
+      <main className="max-w-6xl px-6 mx-auto py-14">
         {/* FEATURES */}
         <section id="features" className="mb-16">
-          <h3 className="text-2xl font-bold mb-10 text-center text-cyan-700">
+          <h3 className="mb-10 text-2xl font-bold text-center text-cyan-700">
             Our Corporate Health Solutions
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid gap-6 md:grid-cols-3">
             {/* features cards remain unchanged */}
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
-              <h4 className="font-bold text-lg text-cyan-700">
+            <div className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-cyan-700">
                 Employee Checkups
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -77,8 +77,8 @@ export default function CorporateHealthPrograms() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
-              <h4 className="font-bold text-lg text-cyan-700">
+            <div className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-cyan-700">
                 Vaccination Drives
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -86,8 +86,8 @@ export default function CorporateHealthPrograms() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
-              <h4 className="font-bold text-lg text-cyan-700">
+            <div className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-cyan-700">
                 Stress Management
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -95,8 +95,8 @@ export default function CorporateHealthPrograms() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
-              <h4 className="font-bold text-lg text-cyan-700">
+            <div className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-cyan-700">
                 Health Risk Assessments
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -104,8 +104,8 @@ export default function CorporateHealthPrograms() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
-              <h4 className="font-bold text-lg text-cyan-700">
+            <div className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-cyan-700">
                 Nutrition & Wellness
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -113,8 +113,8 @@ export default function CorporateHealthPrograms() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg">
-              <h4 className="font-bold text-lg text-cyan-700">
+            <div className="p-6 bg-white shadow-md rounded-xl hover:shadow-lg">
+              <h4 className="text-lg font-bold text-cyan-700">
                 Occupational Health
               </h4>
               <p className="mt-2 text-sm text-gray-600">
@@ -126,12 +126,12 @@ export default function CorporateHealthPrograms() {
 
         {/* FAQ */}
         <section id="faq" className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-center text-cyan-700">
+          <h3 className="mb-6 text-2xl font-bold text-center text-cyan-700">
             Frequently Asked Questions
           </h3>
 
-          <div className="space-y-3 max-w-3xl mx-auto">
-            <details className="bg-white p-5 rounded-lg shadow-sm">
+          <div className="max-w-3xl mx-auto space-y-3">
+            <details className="p-5 bg-white rounded-lg shadow-sm">
               <summary className="font-semibold cursor-pointer">
                 How do you customize programs for companies?
               </summary>
@@ -141,7 +141,7 @@ export default function CorporateHealthPrograms() {
               </p>
             </details>
 
-            <details className="bg-white p-5 rounded-lg shadow-sm">
+            <details className="p-5 bg-white rounded-lg shadow-sm">
               <summary className="font-semibold cursor-pointer">
                 Can you manage large-scale employee programs?
               </summary>
@@ -151,7 +151,7 @@ export default function CorporateHealthPrograms() {
               </p>
             </details>
 
-            <details className="bg-white p-5 rounded-lg shadow-sm">
+            <details className="p-5 bg-white rounded-lg shadow-sm">
               <summary className="font-semibold cursor-pointer">
                 Do you provide reports to HR/Management?
               </summary>
@@ -166,7 +166,7 @@ export default function CorporateHealthPrograms() {
         {/* CTA */}
         <section
           id="contact"
-          className="bg-cyan-50 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md"
+          className="flex flex-col items-center justify-between gap-6 p-8 shadow-md bg-cyan-50 rounded-2xl md:flex-row"
         >
           <div>
             <h4 className="text-xl font-bold text-cyan-900">
@@ -182,13 +182,13 @@ export default function CorporateHealthPrograms() {
             {/* ✅ changed <a> to <Link> */}
             <Link
               to="/contact"
-              className="inline-block bg-cyan-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-cyan-800"
+              className="inline-block px-6 py-3 text-white rounded-lg shadow-md bg-cyan-700 hover:bg-cyan-800"
             >
               Request a Demo
             </Link>
             <Link
               to="/contact"
-              className="inline-block border border-cyan-700 text-cyan-700 px-5 py-3 rounded-lg hover:bg-cyan-50"
+              className="inline-block px-5 py-3 border rounded-lg border-cyan-700 text-cyan-700 hover:bg-cyan-50"
             >
               Contact Sales
             </Link>

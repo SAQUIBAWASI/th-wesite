@@ -65,32 +65,32 @@ const WhoWeServePage = () => {
   return (
     <div className="min-h-screen">
      {/* Hero Section */}
-<section className="text-white px-6 py-12 lg:px-20 lg:py-16 bg-white bg-opacity-60">
+<section className="px-6 py-5 text-white bg-white lg:px-20 lg:py-5 bg-opacity-60">
   {/* Text */}
   <div className="max-w-4xl mx-auto text-left">
-    <h1 className="mb-6 text-3xl md:text-5xl font-bold font-calibri">
+    <h1 className="mb-6 text-3xl font-bold md:text-5xl font-calibri">
       Personalized{" "}
       <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-calibri">
         Care for Every Community
       </span>
     </h1>
-    <p className="mb-8 text-lg font-sans">
+    <p className="mb-8 font-sans text-lg">
       Whether you're a family, a working professional, an RWA leader, or a corporate team — 
       Timely Health brings the right healthcare to your doorstep.
     </p>
   </div>
 
   {/* Image */}
-  <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="grid max-w-4xl grid-cols-1 gap-6 mx-auto md:grid-cols-2">
   <img
     src="/assets/images/we2.jpg"
     alt="Healthcare Services 1"
-    className="w-full h-auto rounded-lg shadow-lg object-cover"
+    className="object-cover w-full h-auto rounded-lg shadow-lg"
   />
   <img
-    src="/assets/images/h1.jpg"
+    src="/assets/images/WEB.jpg"
     alt="Healthcare Services 2"
-    className="w-full h-auto rounded-lg shadow-lg object-cover"
+    className="object-cover w-full h-auto rounded-lg shadow-lg"
   />
 </div>
 
@@ -99,8 +99,8 @@ const WhoWeServePage = () => {
 
 
       {/* Overview */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-5 bg-white">
+        <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
           <p className='font-sans'>
             We understand that different groups have different healthcare needs. That's why we've
             designed specialized programs and services tailored to serve families, communities,
@@ -111,10 +111,10 @@ const WhoWeServePage = () => {
 
       {/* Audience Grid */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="space-y-12">
             {audiences.map((audience, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div key={index} className="overflow-hidden bg-white shadow-lg rounded-xl">
                 <div className="p-8">
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">{audience.icon}</div>
@@ -122,10 +122,10 @@ const WhoWeServePage = () => {
                       <h3 className="mb-3 font-calibri">{audience.title}</h3>
                       <p className="mb-6 font-sans">{audience.description}</p>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-2">
                         {audience.services.map((service, idx) => (
                           <div key={idx} className="flex items-start space-x-3">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="flex-shrink-0 w-2 h-2 mt-2 bg-blue-600 rounded-full"></div>
                             <span className="text-gray-700">{service}</span>
                           </div>
                         ))}
@@ -133,7 +133,7 @@ const WhoWeServePage = () => {
 
                       <button
                         onClick={() => handleServiceRequest(audience.title.split(' ')[1])}
-                        className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        className="px-6 py-3 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
                       >
                         {audience.cta}
                       </button>
@@ -148,14 +148,14 @@ const WhoWeServePage = () => {
 
       {/* Success Stories */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
             <h2 className="mb-4 font-calibri">Success Stories</h2>
             <p className='font-sans'>See how we've made a difference for our diverse community of users</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
               <h3 className="mb-4 font-calibri">RWA Health Camp Success</h3>
               <p className="mb-4 font-sans">
                 "We organized a health camp for 200+ residents in our society. Timely Health provided
@@ -165,7 +165,7 @@ const WhoWeServePage = () => {
               <cite className='font-sans'>— Priya Sharma, RWA Secretary, Gachibowli</cite>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl">
+            <div className="p-8 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl">
               <h3 className="mb-4 font-calibri">Corporate Wellness Program</h3>
               <p className="mb-4 font-sans">
                 "Our employee wellness program with Timely Health saw 85% participation. The on-site
@@ -179,18 +179,18 @@ const WhoWeServePage = () => {
       </section>
 
       {/* Partner Invitation */}
-      <section className="py-20 bg-gradient-to-r from-blue-500 to-green-500 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 text-center text-white bg-gradient-to-r from-blue-500 to-green-500">
+        <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 text-white font-calibri">
             Are you a community leader or corporate wellness head?
           </h2>
-          <p className="mb-8 text-white font-sans">
+          <p className="mb-8 font-sans text-white">
             Let's create a customized health engagement plan for your people.
             We'll work with you to design programs that meet your specific needs and goals.
           </p>
           <button
             onClick={handleStrategyCall}
-            className="px-8 py-4 bg-white text-blue-500 rounded-lg hover:bg-green-500 transition-colors font-semibold font-sans"
+            className="px-8 py-4 font-sans font-semibold text-blue-500 transition-colors bg-white rounded-lg hover:bg-green-500"
           >
             Schedule a Strategy Call
           </button>
@@ -199,16 +199,16 @@ const WhoWeServePage = () => {
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl px-4 mx-auto text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 font-calibri">Ready to Get Started?</h2>
           <p className="mb-8 font-sans">
             No matter which group you represent, we're here to create a healthcare solution
             that works perfectly for your unique needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <button
               onClick={handleWhatsApp}
-              className="flex items-center justify-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              className="flex items-center justify-center px-6 py-3 space-x-2 text-white transition-colors bg-green-600 rounded-lg hover:bg-green-700"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -219,7 +219,7 @@ const WhoWeServePage = () => {
             </button>
             <button
               onClick={handleStrategyCall}
-              className="flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="flex items-center justify-center px-6 py-3 space-x-2 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               <Calendar size={20} />
               <span className='font-sans'>Schedule a Consultation</span>

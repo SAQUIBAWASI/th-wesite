@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom"; // ✅ React Router Link
-
 export default function HomeDiagnostics() {
+  
   const fileInputRef = useRef(null);
 
   const handleFileUpload = () => {
@@ -20,19 +20,19 @@ export default function HomeDiagnostics() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen text-gray-800 bg-gray-50">
       {/* HERO */}
-      <header className="bg-gradient-to-r from-green-500 to-teal-500 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-12 lg:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <header className="text-white bg-gradient-to-r from-green-500 to-teal-500">
+        <div className="max-w-6xl px-6 py-12 mx-auto lg:py-16">
+          <div className="grid items-center grid-cols-1 gap-10 lg:grid-cols-2">
             {/* IMAGE BLOCK */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="w-full order-last lg:order-first"
+              className="order-last w-full lg:order-first"
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl bg-white">
+              <div className="overflow-hidden bg-white shadow-2xl rounded-2xl">
                 <img
                   src="/assets/images/h2.jpg"
                   alt="Home Diagnostics"
@@ -48,10 +48,10 @@ export default function HomeDiagnostics() {
               transition={{ duration: 0.6 }}
               className="order-first lg:order-last"
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
+              <h1 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Home Diagnostics — Trusted Lab at Your Doorstep
               </h1>
-              <p className="mt-4 text-lg sm:text-xl max-w-xl text-white">
+              <p className="max-w-xl mt-4 text-lg text-white sm:text-xl">
                 Get lab tests done from the comfort of your home. Our trained
                 staff ensures safe and hygienic sample collection with accurate
                 results delivered digitally.
@@ -59,16 +59,16 @@ export default function HomeDiagnostics() {
 
 
 
-              <div className="mt-8 flex gap-3 flex-wrap">
+              <div className="flex flex-wrap gap-3 mt-8">
                 <Link
                   to="/contact"
-                  className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg"
+                  className="inline-block px-6 py-3 font-semibold text-green-600 bg-white rounded-lg shadow-md hover:shadow-lg"
                 >
                   Book a Test
                 </Link>
                 <a
                   href="#faq"
-                  className="inline-block border border-white/30 text-white px-5 py-3 rounded-lg hover:bg-white/10"
+                  className="inline-block px-5 py-3 text-white border rounded-lg border-white/30 hover:bg-white/10"
                 >
                   FAQs
                 </a>
@@ -83,32 +83,32 @@ export default function HomeDiagnostics() {
       </header>
 
       {/* MAIN */}
-      <main className="max-w-6xl mx-auto px-6 py-14">
+      <main className="max-w-6xl px-6 mx-auto py-14">
         {/* FAQ */}
         <section id="faq" className="mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-center">
+          <h3 className="mb-6 text-2xl font-bold text-center">
             Frequently Asked Questions
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <h4 className="font-semibold mb-2">How do I book a test?</h4>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="p-6 transition bg-white shadow-sm rounded-xl hover:shadow-md">
+              <h4 className="mb-2 font-semibold">How do I book a test?</h4>
               <p className="text-sm text-gray-600">
                 You can book online or via WhatsApp. Our staff will visit your
                 home at your preferred time.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <h4 className="font-semibold mb-2">Are reports digital?</h4>
+            <div className="p-6 transition bg-white shadow-sm rounded-xl hover:shadow-md">
+              <h4 className="mb-2 font-semibold">Are reports digital?</h4>
               <p className="text-sm text-gray-600">
                 Yes, all reports are delivered digitally and can also be shared
                 directly with your doctor.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <h4 className="font-semibold mb-2">
+            <div className="p-6 transition bg-white shadow-sm rounded-xl hover:shadow-md">
+              <h4 className="mb-2 font-semibold">
                 Is the collection process safe?
               </h4>
               <p className="text-sm text-gray-600">
@@ -117,8 +117,8 @@ export default function HomeDiagnostics() {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-              <h4 className="font-semibold mb-2">
+            <div className="p-6 transition bg-white shadow-sm rounded-xl hover:shadow-md">
+              <h4 className="mb-2 font-semibold">
                 How soon will I get my results?
               </h4>
               <p className="text-sm text-gray-600">
@@ -132,7 +132,7 @@ export default function HomeDiagnostics() {
         {/* CTA */}
         <section
           id="contact"
-          className="bg-green-50 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md"
+          className="flex flex-col items-center justify-between gap-6 p-8 shadow-md bg-green-50 rounded-2xl md:flex-row"
         >
           <div>
             <h4 className="text-xl font-bold">Book Your Home Test Today</h4>
@@ -153,14 +153,14 @@ export default function HomeDiagnostics() {
 
             <button
               onClick={handleFileUpload}
-              className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700"
+              className="inline-block px-6 py-3 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700"
             >
               Upload Prescription
             </button>
 
             <Link
               to="/contact"
-              className="inline-block border border-green-600 text-green-600 px-5 py-3 rounded-lg hover:bg-green-50"
+              className="inline-block px-5 py-3 text-green-600 border border-green-600 rounded-lg hover:bg-green-50"
             >
               Contact Us
             </Link>
