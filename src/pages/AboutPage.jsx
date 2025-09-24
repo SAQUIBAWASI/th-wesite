@@ -42,18 +42,7 @@ const AboutPage = () => {
      {/* Hero Section */}
 {/* Hero Section */}
 <section className="px-6 py-5 text-white bg-white lg:px-20 lg:py-5 bg-opacity-60">
-  {/* Text */}
-  <div className="max-w-4xl mx-auto text-left">
-    <h1 className="mb-6 text-3xl font-bold md:text-5xl font-calibri">
-      Our Vision for a{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-calibri">
-        Healthier, Closer Future
-      </span>
-    </h1>
-    <p className="mb-8 font-sans text-lg">
-      We're not just a healthcare platform — we're your neighborhood's health partner.
-    </p>
-  </div>
+  
 
   {/* Image */}
   <div className="max-w-4xl mx-auto">
@@ -64,9 +53,27 @@ const AboutPage = () => {
   />
 </div>
 
+{/* Text */}
+  <div className="max-w-4xl mx-auto text-left">
+    <h1 className="mb-6 text-3xl font-bold md:text-5xl font-calibri">
+      Our Vision for a{" "}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 font-calibri">
+        Healthier, Closer Future
+      </span>
+    </h1>
+    <p className="mb-8 font-sans text-lg">
+      We're not just a healthcare platform — we're your neighborhood's health partner.
+    </p>
+    <p className="mb-8 font-sans text-lg">
+              We connect people to care that's personal, accessible, and built around community. 
+              Our platform bridges the gap between traditional healthcare and modern convenience, 
+              ensuring that quality medical care is always within reach.
+            </p>
+  </div>
+
 </section>
 
-      {/* Intro Statement */}
+      {/* Intro Statement
       <section className="py-5 bg-white">
         <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="text-center">
@@ -77,7 +84,7 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       
       {/* Our Story */}
